@@ -1,0 +1,30 @@
+{% extends 'base_card.html' %}
+
+{% block title %}
+Card of the product
+{% endblock %}
+
+{% block head %}
+    <button type="button" class="btn btn-outline-primary me-2" onClick="location.href='/auth'">Login</button>
+    <button type="button" class="btn btn-primary" onClick="location.href='/registration'">Sign-Up</button>
+{% endblock %}
+
+{% block content %}
+<main class="container">
+      <!-- Right Column -->
+      <div class="right-column">
+
+        <!-- Product Description -->
+        <div class="product-description">
+          <span>{{ type_product }}</span>
+          <h1>{{ name_product }}</h1>
+          <p>{{ description_product }}</p>
+        </div>
+        <!-- Product Pricing -->
+        <div class="product-price">
+          <span>₽{{ price_product }}</span>
+          <a href="#" class="cart-btn">Add to cart</a>
+        </div>
+      </div>
+    </main>
+{% endblock %}

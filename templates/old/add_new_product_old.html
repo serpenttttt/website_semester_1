@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Добавление продукта</title>
+
+
+	<style type="text/css">
+		body{
+		    background-image: url("../images/background.jpg");
+			margin:0;
+		}
+		.logo {
+            display: inline-block;
+            height: 200px;
+            background-color: #F09694;
+            width: 100%;
+        }
+        .menu {
+            display: inline-block;
+            height: 780px;
+            width: 20%;
+            background-color: #ABD2F0;
+        }
+        .content {
+            display: inline-block;
+            height: 780px;
+            width: 80%;
+            background-color: #EEEEE6;
+        }
+        .footer {
+            display: inline-block;
+            height: 100px;
+            width: 100%;
+            background-color: #87F5AF;
+
+        }
+		.container {
+			display: flex;
+		}
+		.center-div {
+          width: 25%;
+          margin: 0 auto;
+          padding-top: 10%;
+        }
+        .auth-registration {
+        	font-family: arial;
+        	text-align: right;
+        	padding-right: 6 px;
+        }
+        a {
+        	color:  #4682B4;
+        	text-decoration: none;
+        	display: inline-block;
+  			margin: 5px;
+        }
+        a:hover{
+			color:  #4682B4;
+			text-decoration: none;
+		}
+		a:visited{
+			color:  #4682B4;
+			text-decoration: none;
+		}
+		a:active{
+			text-decoration: none;
+		}
+	</style>
+
+
+</head>
+<body>
+		<div class="logo">
+			<h2>
+				Страница добавления продукта
+			</h2>
+			<div class="auth-registration">
+        		<a href="/logout">Logout</a>
+    		</div>
+		</div>
+		<div class="container">
+			<div class="menu">
+				<h2>
+					<br>500x780 px
+				</h2>
+			</div>
+			<div class="content">
+				<div class="center-div">
+					<form method="post">
+						<input type="text" name="product_type" id="product_type">
+						<br>
+						<br>
+						<label for="product_type">Тип продукта</label>
+						<br>
+						<br>
+						<input type="text" name="product_name" id="product_name">
+						<br>
+						<br>
+						<label for="product_name">Наименование продукта</label>
+						<br>
+						<br>
+						<input type="text" name="product_description" id="product_description">
+						<br>
+						<br>
+						<label for="product_description">Краткое описание продукта</label>
+						<br>
+						<br>
+						<input type="text" name="product_brand" id="product_brand">
+						<br>
+						<br>
+						<label for="product_brand">Производитель продукта</label>
+						<br>
+						<br>
+						<input type="text" name="product_price" id="product_price">
+						<br>
+						<br>
+						<label for="product_price">Цена</label>
+						<br>
+						<br>
+
+						<br>
+						<br>
+						<input type="submit" value="Отправить">
+					</form>
+					<br>
+					<br>
+					{{ add_result }}
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<h2>
+				1920x100 px
+			</h2>
+		</div>
+</body>
+</html>

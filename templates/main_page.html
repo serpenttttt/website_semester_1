@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Main page
+{% endblock %}
+
+{% block head %}
+    <div class="col-md-3 text-end">
+        <button type="button" class="btn btn-outline-primary me-2" onClick="location.href='/auth'">Login</button>
+        <button type="button" class="btn btn-primary" onClick="location.href='/registration'">Sign-Up</button>
+      </div>
+{% endblock %}
+
+{% block content %}
+    <h1>Products</h1>
+
+    <ul class="products clearfix">
+    {% for products in range(amount) %}
+	    <li class="product-wrapper">
+            <div class="card">
+              <img src="https://shop.lenovo.ru/upload/resize_cache/content_webp/32bf68f1-7537-11ec-80ed-005056963b6e/0.webp" alt="Photo" style="width:100%">
+              <h1>{{ names[products] }}</h1>
+              <p class="price">₽ {{ prices[products] }}</p>
+              <p>{{ descriptions[products] }}</p>
+              <p><button onClick="location.href='/cards/{{ pid[products] }}'">More...</button></p>
+            </div>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}

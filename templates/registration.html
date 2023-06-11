@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Register page
+{% endblock %}
+
+{% block head %}
+    <div class="col-md-3 text-end">
+        <button type="button" class="btn btn-outline-primary me-2" onClick="location.href='/auth'">Login</button>
+        <button type="button" class="btn btn-primary" onClick="location.href='/registration'">Sign-Up</button>
+      </div>
+{% endblock %}
+
+{% block content %}
+<div class="center-div">
+    <form method="post">
+        <input type="text" name="email" id="email" placeholder="Email">
+        <br>
+        <br>
+        <input type="text" name="login" id="login" placeholder="Login">
+        <br>
+        <br>
+        <input type="password" name="password" id="password" placeholder="Password">
+        <br>
+        <br>
+        <input type="password" name="conf_password" id="conf_password" placeholder="Confirm Password">
+        <br>
+        <br>
+        <input type="submit" value="Complete">
+    </form>
+    <br>
+    <br>
+    <h6>{{ result }}</h6>
+</div>
+{% endblock %}
+
+
