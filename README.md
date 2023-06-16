@@ -6,7 +6,7 @@ Python packages:
 5. flask_bcrypt (bcrypt)
 
 Utilities:
-1. Such as DBeaver (to run the database)
+1. Such as DBeaver (to connect to the database)
 
 Necessary items:
 1. A can of beer
